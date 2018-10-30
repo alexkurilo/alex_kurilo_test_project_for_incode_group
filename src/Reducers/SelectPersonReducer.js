@@ -1,9 +1,9 @@
 const initialState = {};
 
-export default function personData (state = initialState, action){
+export default function findPersonData (state = initialState, action){
     switch (action.type) {
         case "SELECT_PERSON":
-            return action.personData;
+            return action.findPersonData;
         default:
             return state;
     }

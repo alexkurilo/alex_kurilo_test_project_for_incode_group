@@ -1,9 +1,11 @@
 import {combineReducers} from 'redux';
 
 import listArr from "./AddListReducer";
-import personData from "./SelectPerson";
+import findPersonData from "./SelectPersonReducer";
+import findPerson from "./FindPersonReducer";
 
 export default combineReducers({
     listArr,
-    personData
+    findPersonData,
+    findPerson
 })

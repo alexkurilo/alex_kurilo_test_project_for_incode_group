@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import SearchComponent from './Components/SearchComponent';
 import ListComponent from './Components/ListComponent';
 import ClientsDetailsContainer from './Containers/ClientsDetailsContainer'
 
@@ -10,7 +11,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="listBox">
-          <ListComponent/>
+            <SearchComponent/>
+            <ListComponent/>
         </div>
         <ClientsDetailsContainer/>
       </div>

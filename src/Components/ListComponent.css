@@ -1,26 +1,24 @@
 
-.listBox{
-    width: 25%;
-    background-color: #F8F8FF;
-}
 .listSection{
     width: 80%;
     margin: 0 auto;
     display: flex;
     text-align: center;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    padding: 0.5rem ;
 }
 
 .listSection:hover{
     background-color: #FFFFFF;
-    outline: 1px solid #DCDCDC;
-    transform: matrix(1.15, 0, 0, 1.15, 5, 0);
+    border: 1px solid #DCDCDC;
+    border-radius: 0.5rem;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
     width: 80%;
 
 }
 
 .iconAvatar{
-    height: 2rem;
-    width: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
 }

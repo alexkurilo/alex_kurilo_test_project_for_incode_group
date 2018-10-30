@@ -41,10 +41,9 @@ class ListComponent extends Component {
                     >
                         <img    src={item.general.avatar}
                                 className="iconAvatar"
-
                         />
                         <section className="names">
-                            {item.general.firstName+" "+item.general.lastName}
+                            {item.general.firstName+" "+item.general.lastName+", "+item.job.company}
                         </section>
                     </div>
                 )}
@@ -55,8 +54,13 @@ class ListComponent extends Component {
 
 export default connect(
     state => ({
-        listArr: state.listArr,
-        personData: state.personData
+        findPerson: state.findPerson,
+        findPersonData: state.findPersonData,
+        listArr: state.listArr.filter( (element) => {
+            if (element.general.firstName.includes(state.findPerson))return true;
+            if (element.general.lastName.includes(state.findPerson))return true;
+            if (element.job.company.includes(state.findPerson))return true;
+        } )
     }),
     dispatch => ({
         onAddList: (list)=>{
@@ -64,8 +68,8 @@ export default connect(
             dispatch({type: 'ADD_LIST', listArr})
         },
         onSelectPerson: (item) => {
-            const personData = item;
-            dispatch({type: 'SELECT_PERSON', personData})
+            const findPersonData = item;
+            dispatch({type: 'SELECT_PERSON', findPersonData})
         }
     })
 )(ListComponent);

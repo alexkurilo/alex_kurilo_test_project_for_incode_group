@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
-const ClientsDetailsContainer = ({personData}) => {
+const ClientsDetailsContainer = ({findPersonData}) => {
     const ShowSelectedpersonData = () => {
-        if (Object.keys(personData).length !== 0) {
+        if (Object.keys(findPersonData).length !== 0) {
             return (
                 <div>
-                    <img    src={personData.general.avatar}/>
-                    <section>{personData.general.firstName+" "+personData.general.lastName}</section>
-                    <section>company: {personData.job.company}, title: {personData.job.title}</section>
-                    <section>email: {personData.contact.email}, phone: {personData.contact.phone}</section>
-                    <section>address: {personData.address.city+", "+personData.address.country+", "+personData.address.street}</section>
-                    <section>zipCode: {personData.address.zipCode}</section>
+                    <img    src={findPersonData.general.avatar}/>
+                    <section>{findPersonData.general.firstName+" "+findPersonData.general.lastName}</section>
+                    <section>company: {findPersonData.job.company}, title: {findPersonData.job.title}</section>
+                    <section>email: {findPersonData.contact.email}, phone: {findPersonData.contact.phone}</section>
+                    <section>address: {findPersonData.address.city+", "+findPersonData.address.country+", "+findPersonData.address.street}</section>
+                    <section>zipCode: {findPersonData.address.zipCode}</section>
                 </div>
             );
         }
     };
     return(
         <div>
-            {ShowSelectedpersonData(personData)}
+            {ShowSelectedpersonData(findPersonData)}
         </div>
     );
 };
@@ -26,6 +26,6 @@ const ClientsDetailsContainer = ({personData}) => {
 
 export default connect(
     (state) => ({
-        personData: state.personData
+        findPersonData: state.findPersonData
     })
 )(ClientsDetailsContainer);
