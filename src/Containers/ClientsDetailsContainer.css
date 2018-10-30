@@ -1,0 +1,25 @@
+.findPersonWrap{
+    width: 65%;
+    font-size: 1.2rem;
+}
+.findPersonInformation{
+    display: flex;
+    padding: 1rem;
+}
+
+.fullSizeAvatar{
+    height: 128px;
+    width: 128px;
+}
+
+.detailPersonInformation{
+    padding: 0 1rem;
+}
+
+.stringName{
+    font-size: 2rem;
+}
+
+.stringJob{
+    font-size: 1.5rem;
+}
