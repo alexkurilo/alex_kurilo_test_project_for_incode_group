@@ -44,7 +44,7 @@ class ListComponent extends Component {
                                 className="iconAvatar"
                         />
                         <section className="names">
-                            {item.general.firstName+" "+item.general.lastName+", "+item.job.company}
+                            {item.general.firstName+" "+item.general.lastName+", "+item.job.title}
                         </section>
                     </div>
                 )}
@@ -60,7 +60,7 @@ export default connect(
         listArr: state.listArr.filter( (element) => {
             if (element.general.firstName.includes(state.findPerson))return true;
             if (element.general.lastName.includes(state.findPerson))return true;
-            if (element.job.company.includes(state.findPerson))return true;
+            if (element.job.title.includes(state.findPerson))return true;
         } )
     }),
     dispatch => ({
