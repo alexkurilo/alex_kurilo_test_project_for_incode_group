@@ -1,12 +1,15 @@
-
+.listWindow{
+    overflow-y: scroll;
+    height:93vh;
+}
 .listSection{
     width: 80%;
     margin: 0 auto;
     display: flex;
-    text-align: center;
     align-items: center;
-    font-size: 1rem;
-    padding: 0.5rem ;
+    font-size: 0.8rem;
+
+
 }
 
 .listSection:hover{
@@ -21,4 +24,8 @@
 .iconAvatar{
     height: 2.5rem;
     width: 2.5rem;
+}
+
+.names{
+    padding: 0.5rem ;
 }

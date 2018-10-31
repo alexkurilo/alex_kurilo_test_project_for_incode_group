@@ -1,7 +1,18 @@
 .findPersonWrap{
-    width: 65%;
     font-size: 1.2rem;
 }
+
+.hiddenWindow{
+    width: 0%;
+}
+
+.visibleWindow{
+    width: 65%;
+    -webkit-transition: width 1s linear;
+    -moz-transition: width 1s linear;
+    transition: width 1s linear;
+}
+
 .findPersonInformation{
     display: flex;
     padding: 1rem;
@@ -22,4 +33,9 @@
 
 .stringJob{
     font-size: 1.5rem;
+}
+
+.headerInformation{
+    margin-top: 1rem;
+    color: #8B8682;
 }

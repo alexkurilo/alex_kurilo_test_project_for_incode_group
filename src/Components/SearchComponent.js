@@ -17,9 +17,6 @@ const SearchComponent = ({searchInput, onFindPerson}) => {
                     onChange={(event)=>Find(event, searchInput)}
                     placeholder="Enter search parameter please."
             />
-            {/*<img    className="searchIcon"
-                    src="https://png.icons8.com/doodle/50/000000/search.png"
-            />*/}
         </div>
     );
 };

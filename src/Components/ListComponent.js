@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+
 import "./ListComponent.css";
 
 import firebase from 'firebase';
@@ -33,7 +34,7 @@ class ListComponent extends Component {
 
     render() {
         return (
-            <div >
+            <div className="listWindow">
                 {this.props.listArr.map((item, index) =>
                     <div className="listSection"
                          key={index}

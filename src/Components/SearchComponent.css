@@ -1,12 +1,13 @@
-
 .searchWindow{
     display: flex;
     border: 1px solid 	#DCDCDC;
-    min-height: 3rem;
+    height: 7vh;
     background-color: #FFFAFA;
     align-items: center;
-    margin-bottom: 1rem;
 }
+
+.searchLine::-moz-placeholder { color: 	#E6E6FA; }
+.searchLine::-webkit-input-placeholder { color: #E6E6FA; }
 .searchLine{
     width: 100%;
     height: 2rem;
@@ -14,8 +15,8 @@
     outline: none;
     -webkit-appearance: none;
     background-color: inherit;
-    padding: 0 1rem;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .searchIcon{
